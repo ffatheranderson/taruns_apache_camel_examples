@@ -70,7 +70,8 @@ public class RestDslRouteBuilder extends RouteBuilder {
                 .endChoice();
 
 
-        // Rest API configuration
+
+        //My example endpoint.
         rest()
                 .path("/myApi")
                 .consumes("application/json")
@@ -80,7 +81,6 @@ public class RestDslRouteBuilder extends RouteBuilder {
                 .get()
                 .outType(String.class)
                 .to(MY_ROUTE_EXMPL);
-
 
         from(MY_ROUTE_EXMPL)
                 .log("after MY_ROUTE_EXMPL log")
